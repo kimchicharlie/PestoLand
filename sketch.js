@@ -40,7 +40,7 @@ function draw() {
   for (let index = 0; index < sardines.length; index++) {
     if (sardines[index]) {
       var d = dist(penguinX, penguinY, sardines[index].x, sardines[index].y);
-      if (d <= 30) {
+      if (d <= 40) {
         sardines.splice(index, 1);
         score++;
       } else {
@@ -50,16 +50,16 @@ function draw() {
   }
 
   if (keyIsDown(LEFT_ARROW) && penguinX > 0) {
-    penguinX = penguinX - 2;
+    penguinX = penguinX - 3;
   }
   if (keyIsDown(RIGHT_ARROW) && penguinX < 450) {
-    penguinX = penguinX + 2;
+    penguinX = penguinX + 3;
   }
   if (keyIsDown(UP_ARROW) && penguinY > 0) {
-    penguinY = penguinY - 2;
+    penguinY = penguinY - 3;
   }
   if (keyIsDown(DOWN_ARROW) && penguinY < 450) {
-    penguinY = penguinY + 2;
+    penguinY = penguinY + 3;
   }
   image(penguinImage, penguinX, penguinY);
 }
